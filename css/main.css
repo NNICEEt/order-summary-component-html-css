@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+:root {
+    --Paleblue-color: hsl(225, 100%, 94%);
+    --Brightblue-color: hsl(245, 75%, 52%);
+    --Very-paleblue-color: hsl(225, 100%, 98%);
+    --Desaturatedblue-color: hsl(224, 23%, 55%);
+    --Darkblue-color: hsl(223, 47%, 23%);
+}
+
+* {
+    font-family: 'Red Hat Display', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    background: url(/images/pattern-background-desktop.svg) no-repeat;
+    background-color: var(--Paleblue-color);
+    background-size: contain;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    margin-bottom: 1em;
+    background: #fff;
+    width: 350px;
+    border-radius: 1em;
+    box-shadow: hsla(245, 75%, 52%, 0.1) 0px 20px 25px -5px, hsla(245, 75%, 52%, 0.1) 0px 10px 10px -5px;
+    overflow: hidden;
+}
+
+.top-card img {
+    width: 100%;
+}
+
+.bot-card {
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bot-card h1 {
+    color: var(--Darkblue-color);
+    font-size: 1.4em;
+    font-weight: 900;
+}
+
+.bot-card p {
+    margin: 1em 0 1.5em;
+    color: var(--Desaturatedblue-color);
+    font-size: 0.9em;
+    text-align: center;
+}
+
+.plan-card {
+    width: 100%;
+    padding: 1em;
+    margin-bottom: 1.5em;
+    background: var(--Very-paleblue-color);
+    border-radius: 0.5em;
+    display: flex;
+    align-items: center;
+}
+
+.plan-card img {
+    width: 2.5em;
+    margin-right: 1em;
+}
+
+.right-plan-card {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* .detail-plan {
+    margin: 0 4em 0 1em;
+} */
+
+.detail-plan h6, .detail-plan span {
+    font-size: 0.9em;
+}
+
+.detail-plan h6 {
+    color: var(--Darkblue-color);
+}
+
+.detail-plan span {
+    color: var(--Desaturatedblue-color);
+}
+
+.plan-card a {
+    color: var(--Brightblue-color);
+    font-size: 0.7em;
+    font-weight: 900;
+}
+
+.plan-card a:hover {
+    opacity: 0.8;
+    text-decoration: none;
+}
+
+.payment, .cancel {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 0.8em;
+    font-weight: 900;
+    margin-bottom: 1.5em;
+    text-align: center;
+}
+
+.payment {
+    width: 100%;
+    padding: 0.8em 0;
+    color: #fff;
+    background: var(--Brightblue-color);
+    border-radius: 0.5em;
+    box-shadow: hsla(245, 75%, 52%, 0.1) 0px 20px 25px -5px, hsla(245, 75%, 52%, 0.1) 0px 10px 10px 2px;
+}
+
+.payment:hover {
+    opacity: 0.8;
+}
+
+.cancel {
+    color: var(--Desaturatedblue-color);
+}
+
+.cancel:hover {
+    color: var(--Darkblue-color);
+}
+
+.attribution {
+    font-size: 0.8em;
+    text-align: center;
+}
+
+.attribution a {
+    font-size: 1.2em;
+    color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 375px) {
+    * {
+        font-size: 14px;
+    }
+    body {
+        background: url(/images/pattern-background-mobile.svg) no-repeat;
+        background-color: var(--Paleblue-color);
+        background-size: contain;
+    }
+    .card {
+        margin-bottom: 1em;
+        width: 280px;
+    }
+}
